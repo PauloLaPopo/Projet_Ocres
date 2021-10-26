@@ -4,11 +4,11 @@ import React, { Component } from 'react';
 class App extends Component {
 
   state = {
-    post: {}
+    post: [{}]
   }
 
   componentDidMount() {
-    fetch('https://data.football-api.com/v3/competitions/1221?Authorization=cfnR6LWc4i4MDFLlPJrajoa465c4qjF594kpIy4b')
+    fetch('https://data.football-api.com/v3/standings/1221?Authorization=cfnR6LWc4i4MDFLlPJrajoa465c4qjF594kpIy4b')
       //fetch('https://jsonplaceholder.typicode.com/todos/1')
       .then((response) => {
         return response.json()
@@ -16,9 +16,14 @@ class App extends Component {
       .then((result) => {
         this.setState({ post: result })
         console.log(result)
-        console.log(result.name)
+        for (let i = 0; i < 20; i++) {
+          console.log(result[i].team_name)
+          console.log(result[i].points)
+
+
+        }
+
       })
-    console.log(this.state.post.name)
 
   }
 
@@ -26,7 +31,11 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Test</h1>
-        {this.state.post.name}
+        <div>
+
+
+          {this.state.post[0].team_name}
+        </div>
       </div>
     )
   }
