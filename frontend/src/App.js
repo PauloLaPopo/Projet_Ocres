@@ -1,38 +1,50 @@
-import React, { Component } from 'react';
+import React from 'react';
+import './App.css';
 
 
-class App extends Component {
+// mettre nos widget avec header et footer
+import Header from './Components/Header';
+import Widget1 from './Components/Widget1';
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      post: [],
-    };
-  }
 
-  componentDidMount() {
-    fetch("https://data.football-api.com/v3/standings/1221?Authorization=cfnR6LWc4i4MDFLlPJrajoa465c4qjF594kpIy4b")
-      //fetch('https://www.scorebat.com/video-api/v1/')
-      .then((response) => response.json())
-      .then((result) => {
-        this.setState({ post: result })
-        console.log(result);
-      })
-
-  }
+class App extends React.Component {
 
   render() {
     return (
       <div>
-        {this.state.post.map((post) => (
-          <div>
-            <p>{post.team_name} : {post.points}</p>
-          </div>
-        ))}
-      </div>
 
-    )
+        <meta charSet="utf-8" />
+        <title>Dashboard FOOTBALL</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" /> {/*permet de controler la mse en page et de pas zoomer*/}
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous" />
+
+
+        {/*Header debut */}
+
+        <Header />
+
+        {/*Header fin */}
+
+        <main>
+          <div className="container">
+            <div class="row">
+              <div class="col-sm-2">
+
+                <Widget1 />
+
+              </div>
+            </div>
+
+
+          </div>
+        </main>
+
+        {/* <Footer /> */}
+      </div>
+    );
   }
+
 }
 
 export default App;
