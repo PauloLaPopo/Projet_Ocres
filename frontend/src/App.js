@@ -11,7 +11,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div class="General">
 
         <meta charSet="utf-8" />
         <title>Dashboard FOOTBALL</title>
@@ -19,7 +19,7 @@ class App extends React.Component {
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous" />
 
-
+        <br></br>
         {/*Header debut */}
 
         <Header />
@@ -28,12 +28,21 @@ class App extends React.Component {
 
         <main>
           <div className="container">
+
             <div class="row">
-              <div class="col-sm-2">
+              <div class="col-sm-4">
 
                 <Widget1 />
-
               </div>
+              <div class="col-sm-4">
+                <Widget1 />
+              </div>
+              <div class="col-sm-4">
+                <Widget1 />
+              </div>
+
+
+
             </div>
 
 
