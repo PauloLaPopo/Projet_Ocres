@@ -41,8 +41,8 @@ class Widget1 extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {this.state.post.map(post => (
-                            <tr>
+                        {this.state.post.map((post, index) => (
+                            <tr key={`list-elem-${index}`} >
                                 <td class="position">{post.position}</td>
                                 <td class="team">{post.team_name}</td>
                                 <td class="information">{post.overall_w}</td>
@@ -54,7 +54,7 @@ class Widget1 extends React.Component {
                         ))}
                     </tbody>
                 </table>
-            </div>
+            </div >
         )
 
     }

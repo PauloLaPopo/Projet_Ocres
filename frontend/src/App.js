@@ -38,9 +38,6 @@ class App extends React.Component {
               <div class="col-sm-4">
                 <Widget2 />
               </div>
-              <div class="col-sm-4">
-                <Widget1 />
-              </div>
 
 
 
