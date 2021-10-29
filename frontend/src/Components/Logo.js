@@ -1,4 +1,5 @@
 import React from 'react';
+import './logo.css';
 
 import club1 from '../Images/AS_Saint-Etienne.png';
 import club2 from '../Images/FC_Nantes_logo.png';
@@ -130,7 +131,7 @@ class Logo extends React.Component {
     }
     render() {
         return (
-            <img src={this.logo(this.props.team_name)} height="22" width="22" class="img-fluid" alt="" />
+            <img src={this.logo(this.props.team_name)} height="22" width="22" class="img_logo" alt="" />
         )
     }
 

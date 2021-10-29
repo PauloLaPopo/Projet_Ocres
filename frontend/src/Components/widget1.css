@@ -14,16 +14,22 @@ body{
 thead tr  {
   background-color: #02153C;
   color: #CEFB03;
-  text-align: left;
 }
 
 th {
   padding: 15px 10px;
+  text-align: center;
 }
-.position, .team {
+.position{
   padding: 1px 20px;
   color: #02153C;
   font-weight: bold;
+}
+.team{
+  padding: 1px 30px;
+  color: #02153C;
+  font-weight: bold;
+
 }
 .information {
   padding: 1px 10px;
