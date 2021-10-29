@@ -1,6 +1,7 @@
-
 import React from 'react';
 import './widget1.css';
+import './Logo.js';
+import Logo from './Logo.js';
 
 
 class Widget1 extends React.Component {
@@ -44,7 +45,7 @@ class Widget1 extends React.Component {
                         {this.state.post.map((post, index) => (
                             <tr key={`list-elem-${index}`} >
                                 <td class="position">{post.position}</td>
-                                <td class="team">{post.team_name}</td>
+                                <td class="team"><Logo team_name={post.team_name} />{post.team_name}</td>
                                 <td class="information">{post.overall_w}</td>
                                 <td class="information">{post.overall_d}</td>
                                 <td class="information">{post.overall_l}</td>

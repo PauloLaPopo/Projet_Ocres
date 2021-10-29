@@ -7,9 +7,6 @@ class Header extends React.Component {
     render() {
         return (
             <div>
-
-
-
                 <meta charSet="utf-8" />
                 <title>Header</title>
 
@@ -28,9 +25,6 @@ class Header extends React.Component {
                     <div class="mr-auto">
                         <div class="collapse navbar-collapse " id="navbarSupportedContent">
                             <img src={`${Logo}`} height="40" width="65" class="img-fluid" alt="" />
-
-
-
                             <ul class="navbar-nav ">
                                 <li class="nav-item active">
                                     {/*eslint-disable-next-line */}
@@ -46,7 +40,6 @@ class Header extends React.Component {
                         <div class="px-5 py-2 rounded-pill border">
                             <div class="titre"> DASBOARD LIGUE 1</div>
                         </div>
-
                     </div>
                     <div class="ml-auto">
                         <form class="form-inline">
@@ -55,10 +48,7 @@ class Header extends React.Component {
                             </a>
                         </form>
                     </div>
-
                 </nav >
-
-
             </div >
         );
     }
