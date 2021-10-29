@@ -11,28 +11,35 @@ body{
   margin: 100px auto;
   border: 2px solid #02153C;
 }
-thead tr  {
+.table_title  {
   background-color: #02153C;
   color: #CEFB03;
+  text-align: left;
 }
-
-th {
+.row_info{
+  text-align: left;
+}
+.th_chiffre {
   padding: 15px 10px;
+}
+.th_team{
   text-align: center;
+  padding-right: 10px;
 }
 .position{
-  padding: 1px 20px;
+  text-align: center;
   color: #02153C;
   font-weight: bold;
 }
 .team{
-  padding: 1px 30px;
+  padding-right: 10px;
   color: #02153C;
   font-weight: bold;
 
 }
 .information {
-  padding: 1px 10px;
+  padding: 10px 0px;
+  text-align: center;
   color: #02153C;
 }
 
