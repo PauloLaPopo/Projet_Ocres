@@ -30,14 +30,26 @@ class Widget1 extends React.Component {
             <div>
                 <table class="tableau-style">
                     <thead>
-                        <tr><th><strong>Equipes</strong></th>
-                            <th><strong>Points</strong> </th>
+                        <tr>
+                            <th>Pos</th>
+                            <th><strong>Team</strong></th>
+                            <th><strong>W</strong></th>
+                            <th><strong>D</strong></th>
+                            <th><strong>L</strong></th>
+                            <th><strong>Ga</strong></th>
+                            <th><strong>Pts</strong> </th>
                         </tr>
                     </thead>
                     <tbody>
                         {this.state.post.map(post => (
-                            <tr> <td>{post.team_name}</td>
-                                <td>{post.points}</td>
+                            <tr>
+                                <td class="position">{post.position}</td>
+                                <td class="team">{post.team_name}</td>
+                                <td class="information">{post.overall_w}</td>
+                                <td class="information">{post.overall_d}</td>
+                                <td class="information">{post.overall_l}</td>
+                                <td class="information">{post.gd}</td>
+                                <td class="information">{post.points}</td>
                             </tr>
                         ))}
                     </tbody>

@@ -5,6 +5,7 @@ import './App.css';
 // mettre nos widget avec header et footer
 import Header from './Components/Header';
 import Widget1 from './Components/Widget1';
+import Widget2 from './Components/Widget2';
 
 
 class App extends React.Component {
@@ -35,7 +36,7 @@ class App extends React.Component {
                 <Widget1 />
               </div>
               <div class="col-sm-4">
-                <Widget1 />
+                <Widget2 />
               </div>
               <div class="col-sm-4">
                 <Widget1 />
