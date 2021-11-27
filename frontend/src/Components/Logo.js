@@ -21,6 +21,7 @@ import club17 from '../Images/Montpellier_Herault.png';
 import club18 from '../Images/Olympique_lyonnais_logo.png';
 import club19 from '../Images/Paris_Saint-Germain_Logo.svg.png';
 import club20 from '../Images/Racing_Club_de_Strasbourg.png';
+import horloge from '../Images/horloge.png';
 
 
 
@@ -28,7 +29,7 @@ import club20 from '../Images/Racing_Club_de_Strasbourg.png';
 class Logo extends React.Component {
 
     logo(team_name, widht, height) {
-        if (team_name === "Paris SG") {
+        if (team_name === "Paris SG" || team_name === "PSG") {
             return (
                 club19
             )
@@ -118,7 +119,7 @@ class Logo extends React.Component {
                 club3
             )
         }
-        else if (team_name === "St Etienne") {
+        else if (team_name === "St Etienne" || team_name === "Saint-Etienne") {
             return (
                 club1
             )
@@ -126,6 +127,11 @@ class Logo extends React.Component {
         else if (team_name === "Strasbourg") {
             return (
                 club20
+            )
+        }
+        else if (team_name === "horloge") {
+            return (
+                horloge
             )
         }
     }

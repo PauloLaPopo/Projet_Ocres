@@ -15,7 +15,6 @@ class Widget1 extends React.Component {
 
     componentDidMount() {
         fetch("https://data.football-api.com/v3/standings/1221?Authorization=cfnR6LWc4i4MDFLlPJrajoa465c4qjF594kpIy4b")
-            //fetch('https://www.scorebat.com/video-api/v1/')
             .then((response) => response.json())
             .then((result) => {
                 this.setState({ post: result })
@@ -45,7 +44,7 @@ class Widget1 extends React.Component {
                         {this.state.post.map((post, index) => (
                             <tr key={`list-elem-${index}`} >
                                 <td class="position">{post.position}</td>
-                                <td class="team"><Logo team_name={post.team_name} widht="22px" height="22px" />{post.team_name}</td>
+                                <td class="team"><Logo team_name={post.team_name} widht="22px" height="22px" /><span class="team_name_W1">{post.team_name}</span></td>
                                 <td class="information">{post.overall_w}</td>
                                 <td class="information">{post.overall_d}</td>
                                 <td class="information">{post.overall_l}</td>

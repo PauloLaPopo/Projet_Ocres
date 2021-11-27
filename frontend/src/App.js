@@ -6,6 +6,8 @@ import './App.css';
 import Header from './Components/Header';
 import Widget1 from './Components/Widget1';
 import Widget2 from './Components/Widget2';
+import Widget3 from './Components/Widget3';
+import Widget4 from './Components/Widget4';
 
 
 class App extends React.Component {
@@ -35,8 +37,12 @@ class App extends React.Component {
 
                 <Widget1 />
               </div>
-              <div class="col-sm-4">
+              <div class="col-sm-6">
                 <Widget2 />
+                <Widget3 />
+              </div>
+              <div class="col-sm-2">
+                <Widget4 />
               </div>
 
 
