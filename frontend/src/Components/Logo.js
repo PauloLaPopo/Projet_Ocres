@@ -1,27 +1,27 @@
 import React from 'react';
 
 
-import club1 from '../Images/AS_Saint-Etienne.png';
-import club2 from '../Images/FC_Nantes_logo.png';
-import club3 from '../Images/FC-Metz.png';
-import club4 from '../Images/Girondins_de_Bordeaux.png';
-import club5 from '../Images/Logo_AS_Monaco_FC.png';
-import club6 from '../Images/Logo_Clermont_Foot.png';
-import club7 from '../Images/Logo_estac_troyes.png';
-import club8 from '../Images/Logo_FC_Lorient.png';
-import club9 from '../Images/Logo_LOSC_Lille.png';
-import club10 from '../Images/Logo_OGC_Nice.svg.png';
-import club11 from '../Images/Logo_Olympique_de_Marseille.svg.png';
-import club12 from '../Images/Logo_RC_Lens.png';
-import club13 from '../Images/Logo_SCO_Angers.png';
-import club14 from '../Images/Logo_Stade_Brestois.png';
-import club15 from '../Images/Logo_Stade_de_Reims.png';
-import club16 from '../Images/Logo_Stade_Rennais.png';
-import club17 from '../Images/Montpellier_Herault.png';
-import club18 from '../Images/Olympique_lyonnais_logo.png';
-import club19 from '../Images/Paris_Saint-Germain_Logo.svg.png';
-import club20 from '../Images/Racing_Club_de_Strasbourg.png';
-import horloge from '../Images/horloge.png';
+import club1 from '../images/AS_Saint-Etienne.png';
+import club2 from '../images/FC_Nantes_logo.png';
+import club3 from '../images/FC-Metz.png';
+import club4 from '../images/Girondins_de_Bordeaux.png';
+import club5 from '../images/Logo_AS_Monaco_FC.png';
+import club6 from '../images/Logo_Clermont_Foot.png';
+import club7 from '../images/Logo_estac_troyes.png';
+import club8 from '../images/Logo_FC_Lorient.png';
+import club9 from '../images/Logo_LOSC_Lille.png';
+import club10 from '../images/Logo_OGC_Nice.svg.png';
+import club11 from '../images/Logo_Olympique_de_Marseille.svg.png';
+import club12 from '../images/Logo_RC_Lens.png';
+import club13 from '../images/Logo_SCO_Angers.png';
+import club14 from '../images/Logo_Stade_Brestois.png';
+import club15 from '../images/Logo_Stade_de_Reims.png';
+import club16 from '../images/Logo_Stade_Rennais.png';
+import club17 from '../images/Montpellier_Herault.png';
+import club18 from '../images/Olympique_lyonnais_logo.png';
+import club19 from '../images/Paris_Saint-Germain_Logo.svg.png';
+import club20 from '../images/Racing_Club_de_Strasbourg.png';
+import horloge from '../images/horloge.png';
 
 
 
