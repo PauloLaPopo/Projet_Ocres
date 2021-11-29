@@ -1,55 +1,59 @@
 body{
-    height: 100vh;
-    font-family: Arial, Arial, Helvetica, sans-serif;
-  }
+  height: 100vh;
+  font-family: Arial, Arial, Helvetica, sans-serif;
+}
 
-  .tableau_style2{
-    border-collapse: separate;
-    border-spacing: 0px 20px;
-    cursor: collapse;
-    margin: 100px auto;
-  }
+.tableau_style2{
+  border-collapse: separate;
+  border-spacing: 0px 20px;
+  cursor: collapse;
+  margin: 100px auto;
+}
 
-  .local_team{
-    width: 290px;
-    
-  }
-  .local_name{
-    margin-left: 30px;
-  }
-  .local_logo{
-    margin-left: 70px;
-  }
-  .visitor_name{
-    margin-right: 30px;
-  }
-  .visitor_logo{
-    margin-right: 70px;
-  }
-  .score{
-      width: 70px;
-      text-align: center;
-      font-weight: bold;
-      border-left-style: none;
-      border-right-style: none;
-  }
-  .visitor_team{
-    width: 290px;
-    text-align: right;
+.local_team{
+  width: 290px;
+  border-radius: 10px 0 0 10px;
+}
+.local_name{
+  margin-left: 30px;
+}
+.local_logo{
+  margin-left: 70px;
+}
+.visitor_name{
+  margin-right: 30px;
+}
+.visitor_logo{
+  margin-right: 70px;
+}
+.score{
+    width: 70px;
+    text-align: center;
+    font-weight: bold;
     border-left-style: none;
-  }
-  .row_result{
-    height: 60px;
-    background-color: #FFFFFF;
-    color: #02153C;
-  }
-  .match_time{
-    font-weight: bold;
-    padding: 5px;
-    font-size: 12px;
-  }
-  .match_day{
-    font-weight: bold;
-    font-size: 12px;
-    padding-right: 10px;
-  }
+    border-right-style: none;
+}
+.visitor_team{
+  width: 290px;
+  text-align: right;
+  border-left-style: none;
+}
+.row_result{
+  height: 60px;
+  background-color: #FFFFFF;
+  color: #02153C;
+  
+}
+.match_time{
+  font-weight: bold;
+  padding: 5px;
+  font-size: 12px;
+  
+  
+}
+.match_day{
+  font-weight: bold;
+  font-size: 12px;
+  padding-right: 10px;
+  border-radius: 0 10px 10px 0;
+}

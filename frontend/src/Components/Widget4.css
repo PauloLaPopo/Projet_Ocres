@@ -1,4 +1,37 @@
 body{
-    height: 100vh;
-    font-family: Arial, Arial, Helvetica, sans-serif;
-  }
+  height: 100vh;
+  font-family: Arial, Arial, Helvetica, sans-serif;
+}
+
+.tableau-style4{
+  border-collapse: collapse;
+  width: auto;
+  cursor: collapse;
+  margin: 100px auto;
+}
+
+.row_info{
+  background-color: #ffff;
+  border-top: 2px solid #3f61a7;
+}
+
+.odds{
+  font-weight: bold;
+  padding : 10px 10px ;
+  color: #02153C;
+}
+.title_cote{
+  font-weight: bold;
+  color: #02153C;
+  text-align: center;
+}
+
+.result_odd{
+  text-align: center;
+  color: #CEFB03;
+  
+}
+.header_tab{
+  border-bottom: 2px solid #ffff;
+  background-color: #02153C;
+}

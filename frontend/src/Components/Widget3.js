@@ -7,7 +7,7 @@ import {
     CartesianGrid
 } from 'recharts';
 
-
+/*
 class Widget3 extends React.Component {
 
     constructor(props) {
@@ -56,4 +56,4 @@ class Widget3 extends React.Component {
     }
 }
 
-export default Widget3;
+export default Widget3;*/

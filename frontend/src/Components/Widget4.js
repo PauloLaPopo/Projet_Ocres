@@ -35,23 +35,23 @@ class Widget4 extends React.Component {
         return (
             <div>
                 <table class="tableau-style4">
-                    <thead class="table_title2">
-                        <tr>
-                            <th>Pos</th>
-                            <th class="Name_tab"><strong>Cotes des matchs à venir</strong></th>
+                    <caption class="title_cote">Cotes des matchs à venir</caption>
+                    <tr class="header_tab">
+                        <td></td>
+                        <th class="result_odd">1</th>
+                        <th class="result_odd">N</th>
+                        <th class="result_odd">2</th>
+                        <td></td>
+                    </tr>
+                    {this.state.post.slice(0, 4).map((post, index) => (
+                        <tr class="row_info" key={`list-elem-${index}`} >
+                            <td class="team_home">{post.teams[0]}</td>
+                            <td class="odds">{post.sites[0].odds.h2h[0]}</td>
+                            <td class="odds">{post.sites[0].odds.h2h[2]}</td>
+                            <td class="odds">{post.sites[0].odds.h2h[1]}</td>
+                            <td class="team_away">{post.teams[1]}</td>
                         </tr>
-                    </thead>
-                    <tbody class="row_info3">
-                        {this.state.post.slice(0, 4).map((post, index) => (
-                            <tr key={`list-elem-${index}`} >
-                                <td class="team_home">{post.home_team}</td>
-                                <td class="odds">{post.sites[0].odds.h2h[1]}</td>
-                                <td class="odds">{post.sites[0].odds.h2h[2]}</td>
-                                <td class="odds">{post.sites[0].odds.h2h[0]}</td>
-                                <td class="team_away">{post.teams[0]}</td>
-                            </tr>
-                        ))}
-                    </tbody>
+                    ))}
                 </table>
             </div >
         )

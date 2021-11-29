@@ -37,11 +37,10 @@ class App extends React.Component {
 
                 <Widget1 />
               </div>
-              <div class="col-sm-6">
+              <div class="col-sm-5">
                 <Widget2 />
-                <Widget3 />
               </div>
-              <div class="col-sm-2">
+              <div class="col-sm-3">
                 <Widget4 />
               </div>
 
