@@ -31,7 +31,7 @@ class Header extends React.Component {
                                     <a class="nav-link " href="#">Page principale <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " href="{<Widget1>}">Notre API</a>
+                                    <a class="nav-link " href="http://localhost:3001/">Notre API</a>
                                 </li>
                             </ul>
                         </div>
