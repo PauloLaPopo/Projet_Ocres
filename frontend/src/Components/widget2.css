@@ -10,50 +10,66 @@ body{
   margin: 100px auto;
 }
 
-.local_team{
-  width: 290px;
-  border-radius: 10px 0 0 10px;
-}
+
 .local_name{
-  margin-left: 30px;
+  padding-right: 0.5rem;
 }
 .local_logo{
-  margin-left: 70px;
+  padding-left: 0.5rem;
+  border-radius: 0.5rem  0 0 0.5rem;
 }
 .visitor_name{
-  margin-right: 30px;
+  margin-right: 0.5rem;
+  text-align: right;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 .visitor_logo{
-  margin-right: 70px;
+  padding-right: 0.5rem;
 }
-.score{
-    width: 70px;
+.vs{
+  text-align: center;
+    font-weight: bold;
+    border-left-style: none;
+    border-right-style: none;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+.local_team_score{
     text-align: center;
     font-weight: bold;
     border-left-style: none;
     border-right-style: none;
+    margin-left: 0.5rem;
 }
-.visitor_team{
-  width: 290px;
-  text-align: right;
-  border-left-style: none;
+.visitor_team_score{
+  text-align: center;
+    font-weight: bold;
+    border-left-style: none;
+    border-right-style: none;
+    margin-right: 0.5rem;
+    text-align: right;
+}
+.table>:not(caption)>*>* {
+  padding: 0.5rem;
+}
+.table-responsive-sm{
+  overflow-x: auto;
 }
 .row_result{
-  height: 60px;
   background-color: #FFFFFF;
   color: #02153C;
-  
+  height: 3.2rem;
 }
 .match_time{
   font-weight: bold;
-  padding: 5px;
-  font-size: 12px;
-  
-  
+  padding-right: 0.5rem;
+  font-size: 0.5rem;
+  padding-left: 0.5rem;
 }
 .match_day{
   font-weight: bold;
-  font-size: 12px;
-  padding-right: 10px;
-  border-radius: 0 10px 10px 0;
+  font-size: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 0 0.5rem 0.5rem 0;
 }

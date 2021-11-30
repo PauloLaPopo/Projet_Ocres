@@ -8,6 +8,7 @@ import Widget1 from './Components/Widget1';
 import Widget2 from './Components/Widget2';
 import Widget3 from './Components/Widget3';
 import Widget4 from './Components/Widget4';
+import Widget5 from './Components/Widget5';
 
 
 class App extends React.Component {
@@ -30,25 +31,19 @@ class App extends React.Component {
         {/*Header fin */}
 
         <main>
-          <div className="container">
-
+          <div className="container-fluid">
             <div class="row">
-              <div class="col-sm-4">
-
+              <div class="col-lg-3">
                 <Widget1 />
               </div>
-              <div class="col-sm-5">
+              <div class="col-lg-6">
                 <Widget2 />
               </div>
-              <div class="col-sm-3">
+              <div class="col-lg-3">
+                <Widget5 />
                 <Widget4 />
               </div>
-
-
-
             </div>
-
-
           </div>
         </main>
 

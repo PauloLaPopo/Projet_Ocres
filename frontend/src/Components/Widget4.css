@@ -7,7 +7,7 @@ body{
   border-collapse: collapse;
   width: auto;
   cursor: collapse;
-  margin: 100px auto;
+  margin: 50px auto;
 }
 
 .row_info{
@@ -24,6 +24,7 @@ body{
   font-weight: bold;
   color: #02153C;
   text-align: center;
+  caption-side: top;
 }
 
 .result_odd{

@@ -1,0 +1,15 @@
+body{
+    height: 100vh;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+  }
+ .Background{
+    background-image: url('../images/foot_terrain.jpg');
+    height: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+ }
+
+ .Gk{
+     text-align: center;
+     color: #ffffff;
+ }

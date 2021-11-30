@@ -28,7 +28,7 @@ class Widget1 extends React.Component {
         return (
 
             <div>
-                <table class="tableau-style">
+                <table responsive class="tableau-style">
                     <thead class="table_title">
                         <tr>
                             <th>Pos</th>
