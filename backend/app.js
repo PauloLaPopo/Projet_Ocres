@@ -6,14 +6,14 @@ const bodyParser = require('body-parser');
 var RouteMatchs = require('./routes/matchLive');
 const matchModel = require('./models/matchLive');
 
-var indexRouter = require("./routes/index");
+
 
 
 mongoose.connect('mongodb+srv://Antoine:Antoine@testapi.2srsy.mongodb.net/DatabaseDashboard?retryWrites=true&w=majority',
     {
         useNewUrlParser: true, useUnifiedTopology: true
     }).then(() => {
-        console.log("Connexion success ! ")
+        console.log("Connexion à mongoose réussit")
     }).catch((error) => {
         console.log(error);
     }); // CONNECTION AVEC MONGOOSE DE MONGODB
@@ -21,9 +21,6 @@ mongoose.connect('mongodb+srv://Antoine:Antoine@testapi.2srsy.mongodb.net/Databa
 app.use(express.json());
 app.use(cors());
 app.use(bodyParser.json());
-
-app.use('/api/matchs', RouteMatchs);
-app.use("/", indexRouter);
 
 
 
@@ -40,7 +37,7 @@ app.post("/addMatch", async (req, res) => {
     res.send("well add");
 });
 
-app.get("/read", async (req, res) => {
+app.get("/readMatch", async (req, res) => {
     matchModel.find({}, (err, result) => {
         if (err) {
             res.send(err)
@@ -50,7 +47,4 @@ app.get("/read", async (req, res) => {
     });
 });
 
-app.listen(3001, () => {
-    console.log("bien connecté");
-});
 module.exports = app;
