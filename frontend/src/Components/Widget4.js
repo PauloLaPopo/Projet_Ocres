@@ -33,7 +33,7 @@ class Widget4 extends React.Component {
 
     render() {
         return (
-            <div>
+            <div class="table-responsive">
                 <table class="tableau-style4">
                     <caption class="title_cote">Cotes des matchs à venir</caption>
                     <tr class="header_tab">

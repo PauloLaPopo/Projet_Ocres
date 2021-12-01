@@ -32,9 +32,6 @@ class Widget2 extends React.Component {
     }
 
     render() {
-        console.log(this.dateString)
-        console.log(this.dateStringFrom)
-
         return (
 
             <div class="table-responsive">

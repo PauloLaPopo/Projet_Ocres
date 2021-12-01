@@ -27,11 +27,12 @@ class Widget1 extends React.Component {
 
         return (
 
-            <div>
+            <div class="table-responsive">
                 <table responsive class="tableau-style">
                     <thead class="table_title">
                         <tr>
                             <th>Pos</th>
+                            <th></th>
                             <th class="th_team"><strong>Team</strong></th>
                             <th class="th_chiffre"><strong>W</strong></th>
                             <th class="th_chiffre"><strong>D</strong></th>
@@ -44,7 +45,8 @@ class Widget1 extends React.Component {
                         {this.state.post.map((post, index) => (
                             <tr key={`list-elem-${index}`} >
                                 <td class="position">{post.position}</td>
-                                <td class="team"><Logo team_name={post.team_name} widht="22px" height="22px" /><span class="team_name_W1">{post.team_name}</span></td>
+                                <td class="team_logo"><Logo team_name={post.team_name} widht="22px" height="22px" /></td>
+                                <td class="team_name_W1">{post.team_name}</td>
                                 <td class="information">{post.overall_w}</td>
                                 <td class="information">{post.overall_d}</td>
                                 <td class="information">{post.overall_l}</td>

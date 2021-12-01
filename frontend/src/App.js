@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 
+import { Link } from 'react-router-dom';
+import Routes from './Routes';
 
 // mettre nos widget avec header et footer
 import Header from './Components/Header';
@@ -9,6 +11,7 @@ import Widget2 from './Components/Widget2';
 import Widget3 from './Components/Widget3';
 import Widget4 from './Components/Widget4';
 import Widget5 from './Components/Widget5';
+import Home from './Home';
 
 
 class App extends React.Component {
@@ -29,24 +32,24 @@ class App extends React.Component {
         <Header />
 
         {/*Header fin */}
-
+        {/*
         <main>
           <div className="container-fluid">
             <div class="row">
-              <div class="col-lg-3">
+              <div class="col-sm-5">
                 <Widget1 />
               </div>
-              <div class="col-lg-6">
+              <div class="col-sm-4">
                 <Widget2 />
               </div>
-              <div class="col-lg-3">
+              <div class="col-sm-3">
                 <Widget5 />
                 <Widget4 />
               </div>
             </div>
           </div>
         </main>
-
+      */}
         {/* <Footer /> */}
       </div>
     );

@@ -1,6 +1,8 @@
 import React from 'react';
 import './header.css';
 import Logo from '../images/Logo_LIGUE1.png';
+import { Link } from 'react-router-dom';
+import Routes from '../Routes';
 
 class Header extends React.Component {
 
@@ -15,40 +17,44 @@ class Header extends React.Component {
                 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+                <header>
+                    <nav class="navbar navbar-expand-sm py-3 navbar-light bg-white">
 
-                <nav class="navbar navbar-expand-sm py-3 navbar-light bg-white">
+                        {/* Bouton pour le menu deroulant responsive sur mobile*/}
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="mr-auto">
+                            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                                <img src={`${Logo}`} height="40" width="65" class="img-fluid" alt="" />
+                                <ul class="navbar-nav ">
+                                    <li class="nav-item active">
+                                        {/*eslint-disable-next-line */}
+                                        <Link to="/">Home</Link>
+                                        {/*<a class="nav-link " href="#">Page principale <span class="sr-only">(current)</span></a>*/}
+                                    </li>
+                                    <li class="nav-item">
+                                        <Link to="/pageAPI">Notre API</Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mx-auto">
+                            <div class="px-5 py-2 rounded-pill border">
+                                <div class="titre"> DASBOARD LIGUE 1</div>
+                            </div>
+                        </div>
+                        <div class="ml-auto">
+                            <form class="form-inline">
+                                <a class="navbar-brand" href="https://www.google.fr/">
+                                    Admin
+                                </a>
+                            </form>
+                        </div>
+                    </nav >
+                </header>
+                <Routes />
 
-                    {/* Bouton pour le menu deroulant responsive sur mobile*/}
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="mr-auto">
-                        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                            <img src={`${Logo}`} height="40" width="65" class="img-fluid" alt="" />
-                            <ul class="navbar-nav ">
-                                <li class="nav-item active">
-                                    {/*eslint-disable-next-line */}
-                                    <a class="nav-link " href="#">Page principale <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " href="http://localhost:3001/">Notre API</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="mx-auto">
-                        <div class="px-5 py-2 rounded-pill border">
-                            <div class="titre"> DASBOARD LIGUE 1</div>
-                        </div>
-                    </div>
-                    <div class="ml-auto">
-                        <form class="form-inline">
-                            <a class="navbar-brand" href="https://www.google.fr/">
-                                Admin
-                            </a>
-                        </form>
-                    </div>
-                </nav >
             </div >
         );
     }
