@@ -8,6 +8,7 @@ body{
   width: auto;
   cursor: collapse;
   margin: 50px auto;
+  width: 100%;
 }
 
 .row_info{

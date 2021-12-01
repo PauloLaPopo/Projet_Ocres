@@ -27,7 +27,7 @@ class Widget5 extends React.Component {
 
         return (
 
-            <div class="Background">
+            <div class="Background" >
                 {this.state.post.map((post, index) => (
                     <div>
                         <div class="Gk">{post.squad[0].name}</div>

@@ -7,7 +7,7 @@ import {
     CartesianGrid
 } from 'recharts';
 
-/*
+
 class Widget3 extends React.Component {
 
     constructor(props) {
@@ -46,7 +46,7 @@ class Widget3 extends React.Component {
                     <YAxis dataKey="player_name" type="category" scale="band" stroke="#02153C" />
                     <Legend />
                     <Tooltip />
-                    <Bar dataKey="player_penalties" barSize={20} stackId="a" fill="#8884d8" />
+                    {/*<Bar dataKey="player_penalties" barSize={20} stackId="a" fill="#8884d8" />*/}
                     <Bar dataKey="player_goals" barSize={20} stackId="a" fill="#02153C" label={{ position: 'right' }} />
 
                 </BarChart>
@@ -56,4 +56,4 @@ class Widget3 extends React.Component {
     }
 }
 
-export default Widget3;*/
+export default Widget3;

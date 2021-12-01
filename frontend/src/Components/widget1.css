@@ -2,12 +2,18 @@ body{
   height: 100vh;
   font-family: Arial, Arial, Helvetica, sans-serif;
 }
-
+#table-wrapper{
+  position: relative;
+}
+#table-scroll{
+  height: 400px;
+  overflow: auto;
+  margin: 50px auto;
+}
 .tableau-style{
   border-collapse: collapse;
-  width: auto;
+  width: 100%;
   cursor: collapse;
-  margin: 100px auto;
   border: 3px solid #02153C;
 }
 .table_title  {
@@ -18,11 +24,16 @@ body{
   background-color: #ffffff;
   color: #02153C;
 }
-.th_chiffre {
+.th_chiffre  {
   padding: 15px 10px;
+  text-align: center;
+}
+.th_pos{
+  text-align: center;
 }
 .th_team{
   text-align: center;
+  padding-right: 30px;
 }
 .position{
   text-align: center;
