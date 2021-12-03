@@ -22,7 +22,9 @@ import club18 from '../images/Olympique_lyonnais_logo.png';
 import club19 from '../images/Paris_Saint-Germain_Logo.svg.png';
 import club20 from '../images/Racing_Club_de_Strasbourg.png';
 import horloge from '../images/horloge.png';
-import terrain from '../images/terrain_foot.jpg'
+import terrain from '../images/terrain_foot.jpg';
+import live from '../images/liveDashboard.PNG';
+import position from '../images/position.png'
 
 
 
@@ -138,6 +140,16 @@ class Logo extends React.Component {
         else if (team_name === "terrain_foot") {
             return (
                 terrain
+            )
+        }
+        else if (team_name === "live") {
+            return (
+                live
+            )
+        }
+        else if (team_name === "position") {
+            return (
+                position
             )
         }
     }

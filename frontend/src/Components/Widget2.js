@@ -38,7 +38,7 @@ class Widget2 extends React.Component {
                 <table class="tableau_style2">
                     <thead>
 
-                        {this.state.post.reverse().slice(0, 3).map(post => (
+                        {this.state.post.reverse().slice(0, 4).map(post => (
                             <tr class="row_result" >
                                 <td class="local_logo"> <Logo team_name={post.localteam_name} widht="25px" height="25px" /></td>
                                 <td class="local_name">{post.localteam_name}</td>

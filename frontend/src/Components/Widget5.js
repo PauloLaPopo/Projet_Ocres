@@ -1,6 +1,7 @@
 import React from 'react';
 import './Widget5.css';
 import './Logo.js';
+import teamId from './teamId';
 
 
 class Widget5 extends React.Component {
@@ -10,7 +11,12 @@ class Widget5 extends React.Component {
         this.state = {
             post: [],
             post1: [],
+            team_id: "",
         };
+    }
+
+    setTeamId() {
+
     }
 
     componentDidMount() {
