@@ -1,17 +1,9 @@
 import React from 'react';
 import './App.css';
 
-import { Link } from 'react-router-dom';
-import Routes from './Routes';
 
 // mettre nos widget avec header et footer
 import Header from './Components/Header';
-import Widget1 from './Components/Widget1';
-import Widget2 from './Components/Widget2';
-import Widget3 from './Components/Widget3';
-import Widget4 from './Components/Widget4';
-import Widget5 from './Components/Widget5';
-import Home from './Home';
 
 
 class App extends React.Component {
