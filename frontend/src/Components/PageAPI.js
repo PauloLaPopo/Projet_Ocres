@@ -27,11 +27,6 @@ function PageAPI() {
         });
     };
 
-    const supprimerMatch = (_id) => {
-        Axios.delete(`http://localhost:3001/deleteMatch/${_id}`);
-        alert(" match supprimé");
-    };
-
 
     //useEffect fonction qui ce lance a chaque fois qu'on ouvre/ raffraichi une page
 
@@ -44,6 +39,21 @@ function PageAPI() {
                 console.log("erreur pour afficher l'API");
             });
     }, []);
+
+
+
+    const supprimerMatch = (id) => {
+
+        Axios.delete(`http://localhost:3001/deleteMatch/${id}`).then(() => {
+            SetListMatchs(
+                ListMatchs.filter((valeur) => {
+                    console.log(valeur._id);
+                    return valeur._id !== id;
+                })
+            );
+        });
+        alert(" match supprimé");
+    };
 
     return (
         <div className="global">
@@ -94,7 +104,7 @@ function PageAPI() {
                             </div>
                             <button>Update</button>
                             <button id="btn" onClick={() => {
-                                console.log(valeur._id)
+
                                 supprimerMatch(valeur._id);
                             }}>X</button>
 
@@ -104,6 +114,7 @@ function PageAPI() {
             </div>
         </div>
     )
+
 
 }
 
