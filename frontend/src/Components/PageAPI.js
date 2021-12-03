@@ -21,11 +21,18 @@ function PageAPI() {
             ScoreTeam2: ScoreTeam2,
             Place: Place
         }).then(() => {
-            alert("CA MARCHEEEEEE FREESTILE");
-        }).catch(() => {
-            alert("marche pas ...");
+            alert(" match ajouté");
+            SetListMatchs([...ListMatchs, { Team1: Team1, Team2: Team2, ScoreTeam1: ScoreTeam1, ScoreTeam2: ScoreTeam2, Place: Place }]);
+            // ... list matchs correspond a tous les matchs dans la database + on ajoute celui qu'on vient de saisir à l'ecran
         });
     };
+
+    const supprimerMatch = (_id) => {
+        Axios.delete(`http://localhost:3001/deleteMatch/${_id}`);
+        alert(" match supprimé");
+    };
+
+
     //useEffect fonction qui ce lance a chaque fois qu'on ouvre/ raffraichi une page
 
     useEffect(() => {
@@ -73,21 +80,28 @@ function PageAPI() {
 
             <button onClick={addMatch}> Ajouter un Match </button>
 
+            <div className="ListMatchs">
+                {ListMatchs.map((valeur) => {
+                    return (
+                        <div className="MatchContainer">
+                            <div className="Matchs">
 
-            {ListMatchs.map((valeur) => {
-                return <div>
-                    Equipe 1 :
-                    {"  "}{valeur.Team1}{"  "}
-                    Equipe 2 :
-                    {"  "}{valeur.Team2}{"  "}
-                    Score Equipe 1 :
-                    {"  "}{valeur.ScoreTeam1}{"  "}
-                    Score Equipe 2 :
-                    {"  "}{valeur.ScoreTeam2}{"  "}
-                    Emplacement du match:
-                    {"  "}{valeur.Place}{"  "}
-                </div>
-            })}
+                                <h5>Team 1 : {valeur.Team1} </h5>
+                                <h5>Team 2 : {valeur.Team2}</h5>
+                                <h5>But team 1 : {valeur.ScoreTeam1}</h5>
+                                <h5>But team 2 : {valeur.ScoreTeam2}</h5>
+                                <h5>Emplacement match: {valeur.Place}</h5>
+                            </div>
+                            <button>Update</button>
+                            <button id="btn" onClick={() => {
+                                console.log(valeur._id)
+                                supprimerMatch(valeur._id);
+                            }}>X</button>
+
+                        </div>
+                    );
+                })}
+            </div>
         </div>
     )
 

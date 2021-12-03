@@ -47,4 +47,11 @@ app.get("/readMatch", async (req, res) => {
     });
 });
 
+app.delete('/deleteMatch/:id', async (req, res) => {
+    const id = req.params.id;
+    await matchModel.findByIdAndRemove(id).exec();
+    res.send("match supprimé");
+
+});
+
 module.exports = app;
