@@ -40,6 +40,14 @@ function PageAPI() {
             });
     }, []);
 
+    const modifierMatch = (id) => {
+        const newTeam1 = prompt("Enter new team: ");
+
+        Axios.put('http://localhost:3001/updateMatch', {
+            newTeam1: newTeam1,
+            id: id
+        });
+    };
 
 
     const supprimerMatch = (id) => {
@@ -96,15 +104,17 @@ function PageAPI() {
                         <div className="MatchContainer">
                             <div className="Matchs">
 
-                                <h5>Team 1 : {valeur.Team1} </h5>
-                                <h5>Team 2 : {valeur.Team2}</h5>
-                                <h5>But team 1 : {valeur.ScoreTeam1}</h5>
-                                <h5>But team 2 : {valeur.ScoreTeam2}</h5>
-                                <h5>Emplacement match: {valeur.Place}</h5>
+                                <div className="size">Team 1 : {valeur.Team1} </div>
+                                <div className="size">Team 2 : {valeur.Team2}</div>
+                                <div className="size">But {valeur.Team1} : {valeur.ScoreTeam1} </div>
+                                <div className="size">But {valeur.Team} : {valeur.ScoreTeam2} </div>
+                                <div className="size">Emplacement match: {valeur.Place} </div>
                             </div>
-                            <button>Update</button>
-                            <button id="btn" onClick={() => {
+                            <button onClick={() => {
+                                modifierMatch(valeur._id);
+                            }}>Update</button>
 
+                            <button id="btn" onClick={() => {
                                 supprimerMatch(valeur._id);
                             }}>X</button>
 

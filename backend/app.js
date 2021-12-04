@@ -47,6 +47,25 @@ app.get("/readMatch", async (req, res) => {
     });
 });
 
+app.put("/updateMatch", async (req, res) => {
+    const id = req.body.id;
+    const newTeam1 = req.body.newTeam1;
+
+    try {
+        await matchModel.findById(id, (error, MatchToUpdate) => {
+            MatchToUpdate.Team1 = newTeam1;
+            MatchToUpdate.save();
+
+
+        })
+
+    } catch (err) {
+
+    }
+
+    res.send("updated");
+});
+
 app.delete('/deleteMatch/:id', async (req, res) => {
     const id = req.params.id;
     await matchModel.findByIdAndRemove(id).exec();

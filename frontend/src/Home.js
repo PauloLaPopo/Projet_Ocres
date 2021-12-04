@@ -29,24 +29,24 @@ class Home extends React.Component {
                     <div className="container-fluid">
                         <div class="row">
                             <div class="col-md-3">
-                                <Widget1 />
+                                {/*<Widget1 />*/}
 
                             </div>
                             <div class="col-md-6">
                                 <Widget6 />
                             </div>
                             <div class="col-md-3">
-                                <Widget5 />
+                                {/*<Widget5 />*/}
 
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-3">
 
-                                <Widget3 />
+                                {/*<Widget3 />*/}
                             </div>
                             <div class="col-md-6">
-                                <Widget2 />
+                                {/*<Widget2 />*/}
                             </div>
                             <div class="col-md-3">
 

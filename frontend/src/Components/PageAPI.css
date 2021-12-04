@@ -3,7 +3,7 @@
 }
 
 .Matchs{
-    width: 70em;
+    width: 60em;
     height: 4em;
     background-color: green;
     color: white;
@@ -11,10 +11,6 @@
     padding: 10px;
 }
 
-.Matchs h5{
-    margin-left: 15px;
-    margin-right: 15px;
-}
 
 .ListMatchs{
     display: flex; /* met les affichage sur la meme ligne */
@@ -45,6 +41,12 @@
 #btn
 {
     border-left: none;
+}
+
+.size{
+    font-size: 1.2em;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 
