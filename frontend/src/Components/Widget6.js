@@ -37,7 +37,7 @@ class Widget6 extends React.Component {
                             <span class="score_live">{post.ScoreTeam1} - {post.ScoreTeam2}</span>
                             <span class="logo_dom"><Logo team_name={post.Team2} widht="70px" height="70px" /></span></div>
                         <div class="live"><span class="logo_live">Live</span></div>
-                        <div class="infos"><Logo team_name="horloge" widht="15px" height="15px" /> 34"
+                        <div class="infos"><Logo team_name="horloge1" widht="15px" height="15px" /> 34"
                             <Logo team_name="position" widht="15px" height="15px" /> {post.Place}</div>
                     </>
 
