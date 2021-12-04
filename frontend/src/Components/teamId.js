@@ -105,5 +105,11 @@ class teamId extends React.Component {
             )
         }
     }
+
+    render() {
+        return (
+            this.teamid(this.props.team_name)
+        )
+    }
 }
 export default teamId;

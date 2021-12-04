@@ -25,7 +25,7 @@ import horloge from '../images/horloge.png';
 import terrain from '../images/terrain_foot.jpg';
 import position from '../images/position.png';
 import horloge1 from '../images/Image3.png';
-import loca from '../images/loca.png';
+import loca from '../images/locali.png';
 
 
 

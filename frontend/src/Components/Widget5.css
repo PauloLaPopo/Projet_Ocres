@@ -10,6 +10,7 @@ body{
  }
  .tableau-style5{
    margin: 10px auto;
+   padding-top: 15px;
    font-size: 10px;
  }
 .Gk{
@@ -31,4 +32,5 @@ body{
 .tableau-style6{
    margin: 10px auto;
    font-size: 10px;
+   margin-top: 6em;
  }

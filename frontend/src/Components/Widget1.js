@@ -18,7 +18,6 @@ class Widget1 extends React.Component {
             .then((response) => response.json())
             .then((result) => {
                 this.setState({ post: result })
-                console.log(result);
             })
 
     }

@@ -11,7 +11,8 @@ class Widget5 extends React.Component {
         this.state = {
             post: [],
             post1: [],
-            team_id: "",
+            post3: [],
+
         };
     }
 
@@ -20,120 +21,128 @@ class Widget5 extends React.Component {
     }
 
     componentDidMount() {
-        fetch("https://data.football-api.com/v3/teams/10061?Authorization=cfnR6LWc4i4MDFLlPJrajoa465c4qjF594kpIy4b        ")
+
+        fetch("http://localhost:3001/readMatch")
             .then((response) => response.json())
             .then((result) => {
-                this.setState({ post: result })
+                this.setState({ post3: result })
+
+                fetch(`https://data.football-api.com/v3/teams/${new teamId().teamid(result[0].Team1)}?Authorization=cfnR6LWc4i4MDFLlPJrajoa465c4qjF594kpIy4b        `)
+                    .then((response) => response.json())
+                    .then((result) => {
+                        this.setState({ post: result })
+                    })
+                fetch(`https://data.football-api.com/v3/teams/${new teamId().teamid(result[0].Team2)}?Authorization=cfnR6LWc4i4MDFLlPJrajoa465c4qjF594kpIy4b        `)
+                    .then((response) => response.json())
+                    .then((result) => {
+                        this.setState({ post1: result })
+                    })
+
             })
-        fetch("https://data.football-api.com/v3/teams/10042?Authorization=cfnR6LWc4i4MDFLlPJrajoa465c4qjF594kpIy4b        ")
-            .then((response) => response.json())
-            .then((result) => {
-                this.setState({ post1: result })
-            })
+
 
     }
 
     render() {
-
         return (
 
             <div class="Background" >
 
 
-                <div class="table-responsive">
-                    <table class="tableau-style5">
-                        {this.state.post.map((post, index) => (
-                            <tr class="row_tab5" key={`list-elem-${index}`} >
-                                <td></td>
-                                <td></td>
-                                <td class="Gk">{post.squad[0].name}</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
 
-                        ))}
-                        {this.state.post.map((post, index) => (
-                            <tr class="row_tab5" key={`list-elem-${index}`} >
-                                <td class="LgG">{post.squad[5].name}</td>
-                                <td class="DcG">{post.squad[7].name}</td>
-                                <td></td>
-                                <td class="DcD">{post.squad[8].name}</td>
-                                <td class="LgD">{post.squad[9].name}</td>
+                <table class="tableau-style5">
+                    {this.state.post.map((post, index) => (
+                        <tr class="row_tab5" key={`list-elem-${index}`} >
+                            <td></td>
+                            <td></td>
+                            <td class="Gk">{post.squad[0].name}</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
 
-                            </tr>
+                    ))}
+                    {this.state.post.map((post, index) => (
+                        <tr class="row_tab5" key={`list-elem-${index}`} >
+                            <td class="LgG">{post.squad[5].name}</td>
+                            <td class="DcG">{post.squad[7].name}</td>
+                            <td></td>
+                            <td class="DcD">{post.squad[8].name}</td>
+                            <td class="LgD">{post.squad[9].name}</td>
 
-                        ))}
-                        {this.state.post.map((post, index) => (
-                            <tr class="row_tab5" key={`list-elem-${index}`} >
-                                <td></td>
-                                <td>{post.squad[16].name}</td>
-                                <td>{post.squad[20].name}</td>
-                                <td>{post.squad[17].name}</td>
-                                <td></td>
-                            </tr>
+                        </tr>
 
-                        ))}
-                        {this.state.post.map((post, index) => (
-                            <tr class="row_tab5" key={`list-elem-${index}`} >
-                                <td>{post.squad[34].name}</td>
-                                <td></td>
-                                <td>{post.squad[31].name}</td>
-                                <td></td>
-                                <td>{post.squad[33].name}</td>
-                            </tr>
+                    ))}
+                    {this.state.post.map((post, index) => (
+                        <tr class="row_tab5" key={`list-elem-${index}`} >
+                            <td></td>
+                            <td>{post.squad[12].name}</td>
+                            <td>{post.squad[13].name}</td>
+                            <td>{post.squad[15].name}</td>
+                            <td></td>
+                        </tr>
 
-                        ))}
+                    ))}
+                    {this.state.post.map((post, index) => (
+                        <tr class="row_tab5" key={`list-elem-${index}`} >
+                            <td>{post.squad[21].name}</td>
+                            <td></td>
+                            <td>{post.squad[22].name}</td>
+                            <td></td>
+                            <td>{post.squad[23].name}</td>
+                        </tr>
 
-                    </table>
-                </div>
+                    ))}
 
-                <div class="table-responsive">
-                    <table class="tableau-style6">
-                        {this.state.post1.map((post1, index) => (
-                            <tr class="row_tab5" key={`list-elem-${index}`} >
-                                <td></td>
-                                <td>{post1.squad[31].name}</td>
-                                <td class="Gk"></td>
-                                <td>{post1.squad[18].name}</td>
-                                <td></td>
-                            </tr>
+                </table>
 
-                        ))}
-                        {this.state.post1.map((post1, index) => (
-                            <tr class="row_tab5" key={`list-elem-${index}`} >
-                                <td class="LgG">{post1.squad[19].name}</td>
-                                <td class="DcG">{post1.squad[17].name}</td>
-                                <td>{post1.squad[6].name}</td>
-                                <td class="DcD">{post1.squad[15].name}</td>
-                                <td class="LgD">{post1.squad[11].name}</td>
 
-                            </tr>
 
-                        ))}
-                        {this.state.post1.map((post1, index) => (
-                            <tr class="row_tab5" key={`list-elem-${index}`} >
-                                <td></td>
-                                <td>{post1.squad[8].name}</td>
-                                <td>{post1.squad[5].name}</td>
-                                <td>{post1.squad[4].name}</td>
-                                <td></td>
-                            </tr>
+                <table class="tableau-style6">
+                    {this.state.post1.map((post1, index) => (
+                        <tr class="row_tab5" key={`list-elem-${index}`} >
+                            <td></td>
+                            <td>{post1.squad[25].name}</td>
+                            <td class="Gk"></td>
+                            <td>{post1.squad[18].name}</td>
+                            <td></td>
+                        </tr>
 
-                        ))}
-                        {this.state.post1.map((post1, index) => (
-                            <tr class="row_tab5" key={`list-elem-${index}`} >
-                                <td></td>
-                                <td></td>
-                                <td>{post1.squad[1].name}</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
+                    ))}
+                    {this.state.post1.map((post1, index) => (
+                        <tr class="row_tab5" key={`list-elem-${index}`} >
+                            <td class="LgG">{post1.squad[19].name}</td>
+                            <td class="DcG">{post1.squad[17].name}</td>
+                            <td>{post1.squad[6].name}</td>
+                            <td class="DcD">{post1.squad[15].name}</td>
+                            <td class="LgD">{post1.squad[11].name}</td>
 
-                        ))}
+                        </tr>
 
-                    </table>
-                </div>
-            </div >
+                    ))}
+                    {this.state.post1.map((post1, index) => (
+                        <tr class="row_tab5" key={`list-elem-${index}`} >
+                            <td></td>
+                            <td>{post1.squad[8].name}</td>
+                            <td>{post1.squad[5].name}</td>
+                            <td>{post1.squad[4].name}</td>
+                            <td></td>
+                        </tr>
+
+                    ))}
+                    {this.state.post1.map((post1, index) => (
+                        <tr class="row_tab5" key={`list-elem-${index}`} >
+                            <td></td>
+                            <td></td>
+                            <td>{post1.squad[1].name}</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                    ))}
+
+                </table>
+            </div>
+
         )
 
     }

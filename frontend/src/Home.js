@@ -50,7 +50,7 @@ class Home extends React.Component {
                             </div>
                             <div class="col-md-3">
 
-                                <Widget4 />
+                                {/*<Widget4 />*/}
                             </div>
                         </div>
                     </div>
