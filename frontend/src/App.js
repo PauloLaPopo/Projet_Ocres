@@ -10,7 +10,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div class="General">
+      <div className="General">
 
         <meta charSet="utf-8" />
         <title>Dashboard FOOTBALL</title>

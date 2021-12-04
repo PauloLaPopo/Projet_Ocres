@@ -10,6 +10,7 @@ import {
 
 class Widget3 extends React.Component {
 
+    _isMounted = false;
     constructor(props) {
         super(props);
 
@@ -19,6 +20,7 @@ class Widget3 extends React.Component {
     }
 
     componentDidMount() {
+        this._isMounted = true;
         fetch("https://football98.p.rapidapi.com/ligue1/scorers", {
             "method": "GET",
             "headers": {
@@ -28,13 +30,17 @@ class Widget3 extends React.Component {
         })
             .then(response => response.json())
             .then((result) => {
-                this.setState({ post: result })
+                if (this._isMounted) {
+                    this.setState({ post: result })
+                }
             })
             .catch(err => {
                 console.error(err);
             });
     }
-
+    componentWillUnmount() {
+        this._isMounted = false;
+    }
     render() {
 
         return (
