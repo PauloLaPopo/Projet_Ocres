@@ -3,24 +3,24 @@ const mongoose = require('mongoose');
 const mat = mongoose.Schema({
     Team1: {
         type: String,
-        required: true
+        required: true,
     },
     Team2: {
         type: String,
-        required: true
+        required: true,
     },
     ScoreTeam1: {
         type: Number,
-        required: true
+        required: true,
     },
     ScoreTeam2: {
         type: Number,
-        required: true
+        required: true,
     },
     Place: {
         type: String,
-        required: true
+        required: true,
     }
 });
 
-module.exports = mongoose.model('Match', mat);
+module.exports = mongoose.model('Matches', mat);

@@ -19,10 +19,20 @@ function PageAPI() {
             Team2: Team2,
             ScoreTeam1: ScoreTeam1,
             ScoreTeam2: ScoreTeam2,
-            Place: Place
-        }).then(() => {
+            Place: Place,
+        }).then((response) => {
             alert(" match ajouté");
-            SetListMatchs([...ListMatchs, { Team1: Team1, Team2: Team2, ScoreTeam1: ScoreTeam1, ScoreTeam2: ScoreTeam2, Place: Place }]);
+            SetListMatchs([...ListMatchs, { _id: response.data.id, Team1: Team1, Team2: Team2, ScoreTeam1: ScoreTeam1, ScoreTeam2: ScoreTeam2, Place: Place }]);
+
+            {/*on fait appelle à cette fonction afin d'envoyer à notre setlistmatchs le dernier ajout */ }
+            Axios.get('http://localhost:3001/readMatch')
+                .then((response) => {
+                    SetListMatchs(response.data);
+                })
+                .catch(() => {
+                    console.log("erreur pour afficher l'API");
+                });
+
             // ... list matchs correspond a tous les matchs dans la database + on ajoute celui qu'on vient de saisir à l'ecran
         });
     };
@@ -41,11 +51,20 @@ function PageAPI() {
     }, []);
 
     const modifierMatch = (id) => {
-        const newTeam1 = prompt("Enter new team: ");
+        const newTeam1 = prompt("Entrer la nouvelle equipe 1: ");
+        const newTeam2 = prompt("Entrer la nouvelle equipe 2: ");
 
         Axios.put('http://localhost:3001/updateMatch', {
             newTeam1: newTeam1,
-            id: id
+            newTeam2: newTeam2,
+            id: id,
+        }).then(() => {
+            SetListMatchs(
+                ListMatchs.map((valeur) => {
+                    return valeur._id === id ?
+                        { _id: id, Team1: newTeam1, Team2: newTeam2, ScoreTeam1: valeur.ScoreTeam1, ScoreTeam2: valeur.ScoreTeam2, Place: valeur.Place } : valeur;
+                })
+            );
         });
     };
 
@@ -55,7 +74,6 @@ function PageAPI() {
         Axios.delete(`http://localhost:3001/deleteMatch/${id}`).then(() => {
             SetListMatchs(
                 ListMatchs.filter((valeur) => {
-                    console.log(valeur._id);
                     return valeur._id !== id;
                 })
             );
@@ -65,38 +83,41 @@ function PageAPI() {
 
     return (
         <div className="global">
+            <div className="design">
 
-            <input type="text" placeholder="Nom équipe 1 ..."
-                onChange={(event) => {
-                    SetTeam1(event.target.value);
-                }}
-            />  <br /><br />
+                <input type="text" placeholder="Nom équipe 1 ..."
+                    onChange={(event) => {
+                        SetTeam1(event.target.value);
+                    }}
+                />  <br /><br />
 
-            <input type="text" placeholder="Nom équipe 2 ..."
-                onChange={(event) => {
-                    SetTeam2(event.target.value);
-                }}
-            />  <br /><br />
-            <input type="number" placeholder="But équipe 1 ..."
-                onChange={(event) => {
-                    SetScoreTeam1(event.target.value);
-                }}
-            />  <br /><br />
-
-            <input type="number" placeholder="But equipe 2 ..."
-                onChange={(event) => {
-                    SetScoreTeam2(event.target.value);
-                }}
-            />  <br /><br />
-
-            <input type="text" placeholder="Emplacement du match ..."
-                onChange={(event) => {
-                    SetPlace(event.target.value);
-                }}
-            />  <br /><br />
+                <input type="text" placeholder="Nom équipe 2 ..."
+                    onChange={(event) => {
+                        SetTeam2(event.target.value);
+                    }}
+                />  <br /><br />
+                <input type="number" placeholder="But équipe 1 ..."
+                    onChange={(event) => {
+                        SetScoreTeam1(event.target.value);
+                    }}
+                />  <br /><br />
 
 
-            <button onClick={addMatch}> Ajouter un Match </button>
+                <input type="number" placeholder="But equipe 2 ..."
+                    onChange={(event) => {
+                        SetScoreTeam2(event.target.value);
+                    }}
+                />  <br /><br />
+
+                <input type="text" placeholder="Emplacement du match ..."
+                    onChange={(event) => {
+                        SetPlace(event.target.value);
+                    }}
+                />  <br /><br />
+            </div>
+            <button id="btn2" onClick={addMatch}> Ajouter un Match </button>
+
+
 
             <div className="ListMatchs">
                 {ListMatchs.map((valeur) => {
