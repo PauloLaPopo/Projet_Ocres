@@ -24,29 +24,18 @@ class Home extends React.Component {
                         <div className="row">
                             <div className="col-lg-3 order-lg-first order-md-last order-sm-last order-last">
                                 <Widget1 />
-
-                            </div>
-                            <div className="col-lg-6 col-md-6 order-md-first order-sm-first">
-                                <Widget6 />
-                            </div>
-                            <div className="col-lg-3 col-md-6">
-                                <Widget5 />
-
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-md-3">
-
                                 <Widget3 />
                             </div>
-                            <div className="col-md-6">
+                            <div className="col-lg-6 col-md-8 order-md-first order-sm-first">
+                                <Widget6 />
                                 <Widget2 />
                             </div>
-                            <div className="col-md-3">
-
+                            <div className="col-lg-3 col-md-4">
+                                <Widget5 />
                                 {/*<Widget4 />*/}
                             </div>
                         </div>
+
                     </div>
                 </main>
 

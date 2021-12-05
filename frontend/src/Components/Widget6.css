@@ -6,7 +6,7 @@ body{
 .background_live{
 
     background-image: url('../images/liveDashboard.PNG');
-    height: 100%;
+    height: 35%;
     background-repeat: no-repeat;
     background-position: center top;
     margin-top: 50px;

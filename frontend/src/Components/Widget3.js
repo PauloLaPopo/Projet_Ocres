@@ -3,7 +3,7 @@ import './Widget3.css';
 import './Logo.js';
 
 import {
-    BarChart, ResponsiveContainer, Legend, Tooltip, Bar, XAxis, YAxis,
+    BarChart, ResponsiveContainer, Legend, LabelList, Tooltip, Bar, XAxis, YAxis,
     CartesianGrid
 } from 'recharts';
 
@@ -44,18 +44,27 @@ class Widget3 extends React.Component {
     render() {
 
         return (
-            <ResponsiveContainer width="100%" aspect={2}>
-                <BarChart layout="vertical" width={500} height={500} barCategoryGap={15} data={this.state.post.slice(0, 8)} >
-                    <CartesianGrid />
-                    <XAxis type="number" />
-                    <YAxis dataKey="player_name" type="category" scale="band" stroke="#02153C" />
-                    <Legend />
-                    <Tooltip />
-                    {/*<Bar dataKey="player_penalties" barSize={20} stackId="a" fill="#8884d8" />*/}
-                    <Bar dataKey="player_goals" barSize={20} stackId="a" fill="#02153C" label={{ position: 'right' }} />
+            <div>
+                <div className="text-center font-weight-bold">Graphe meilleurs buteurs du championnat</div>
+                <ResponsiveContainer width={'100 %'} height={200}>
+                    <BarChart layout="vertical" data={this.state.post.slice(0, 8)} margin={{
+                        top: 5,
+                        right: 20,
+                        bottom: 5,
+                    }} >
+                        <CartesianGrid />
+                        <XAxis type="number" />
+                        <YAxis dataKey="player_name" fontSize={0} type="category" scale="band" stroke="#02153C" />
+                        <Legend />
+                        <Tooltip />
+                        <Bar dataKey="player_goals" name="Buts" barSize={40} stackId="a" fill="#02153C" label={{ position: 'right' }}>
+                            <LabelList dataKey="player_name" position="insideRight" style={{ fill: "white" }} fontSize={10} />
+                        </Bar>
 
-                </BarChart>
-            </ResponsiveContainer>
+                    </BarChart>
+                </ResponsiveContainer>
+            </div>
+
         )
 
     }

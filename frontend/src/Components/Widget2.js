@@ -43,6 +43,7 @@ class Widget2 extends React.Component {
 
             <div className="table-responsive">
                 <table className="tableau_style2">
+                    <caption className="title_last_match">Résultats 3 derniers jours</caption>
                     <thead>
 
                         {this.state.post.reverse().slice(0, 4).map((post, index) => (

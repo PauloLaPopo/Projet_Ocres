@@ -2,43 +2,23 @@ body{
     height: 100vh;
     font-family: Arial, Arial, Helvetica, sans-serif;
   }
- .Background{
+
+  @media (min-width: 250px) {
+   .container-bg{
+       max-width: 330px;
+   }
+}
+
+ .container-bg{
     background-image: url('../images/football_terrain.png');
     height: 100%;
     background-repeat: no-repeat;
     background-position: center top;
+    margin-top: 50px;
+    font-size: 8px;
+    font-weight: 500;
+    color: #fff;
  }
- .tableau-style5{
-   margin: 10px auto;
-   margin-top: 50px;
-   font-size: 9px;
-   color: #fff;
-   font-weight:500;
+ .team1{
+    
  }
-.Gk{
-   text-align: center; 
-}
-.row_tab5 td{
-   width: 55px;
-   height: 2.5em;
-   padding: 2px;
-   text-align: center;
-}
-.DcG{
-   vertical-align: top;
-   
-}
-.DcD{
-   vertical-align: top;
-}
-
-.tableau-style6{
-   margin: 10px auto;
-   font-size: 9px;
-   margin-top: 2em;
-   color: #fff;
-   font-weight: 500;
- }
-.pin{
-   
-}

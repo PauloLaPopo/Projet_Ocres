@@ -8,7 +8,7 @@ body{
 #table-scroll{
   height: 400px;
   overflow: auto;
-  margin: 50px auto;
+  margin: 30px auto;
 }
 .tableau-style{
   border-collapse: collapse;
@@ -59,4 +59,12 @@ body{
   font-weight: bold;
   border: 2px solid #f1f1f1;
   border-left: none;
+}
+.title_classement{
+  font-weight: bold;
+  color: #02153C;
+  text-align: center;
+  font-size: 0.8em;
+  caption-side: top;
+  margin-top: 30px;
 }

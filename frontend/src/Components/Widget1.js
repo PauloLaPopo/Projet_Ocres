@@ -33,10 +33,14 @@ class Widget1 extends React.Component {
     render() {
 
         return (
+
+
             <div id="table-wrapper">
+                <div className="title_classement">Classement Championnat</div>
                 <div id="table-scroll">
                     <div className="table-responsive">
                         <table responsive="true" className="tableau-style">
+
                             <thead className="table_title">
                                 <tr>
                                     <th className="th_pos">Pos</th>

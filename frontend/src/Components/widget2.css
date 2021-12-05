@@ -7,7 +7,7 @@ body{
   border-collapse: separate;
   border-spacing: 0px 20px;
   cursor: collapse;
-  margin: 100px auto;
+  margin: 15px auto;
   width: 100%;
 }
 
@@ -73,4 +73,10 @@ body{
   font-size: 0.5rem;
   padding-right: 0.5rem;
   border-radius: 0 0.5rem 0.5rem 0;
+}
+.title_last_match{
+  font-weight: bold;
+  color: #02153C;
+  text-align: left;
+  caption-side: top;
 }
