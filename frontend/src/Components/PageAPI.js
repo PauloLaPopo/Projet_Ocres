@@ -51,18 +51,26 @@ function PageAPI() {
     }, []);
 
     const modifierMatch = (id) => {
-        const newTeam1 = prompt("Entrer la nouvelle equipe 1: ");
-        const newTeam2 = prompt("Entrer la nouvelle equipe 2: ");
+        const newTeam1 = prompt("Entrer la nouvelle équipe 1: ");
+        const newTeam2 = prompt("Entrer la nouvelle équipe 2: ");
+        const newScoreTeam1 = prompt("Entrer score équipe 1: ");
+        const newScoreTeam2 = prompt("Entrer score équipe 2: ");
+        const newPlace = prompt("Entrer le nouvel emplacement du match: ");
+
+
 
         Axios.put('http://localhost:3001/updateMatch', {
             newTeam1: newTeam1,
             newTeam2: newTeam2,
+            newScoreTeam1: newScoreTeam1,
+            newScoreTeam2: newScoreTeam2,
+            newPlace: newPlace,
             id: id,
         }).then(() => {
             SetListMatchs(
                 ListMatchs.map((valeur) => {
                     return valeur._id === id ?
-                        { _id: id, Team1: newTeam1, Team2: newTeam2, ScoreTeam1: valeur.ScoreTeam1, ScoreTeam2: valeur.ScoreTeam2, Place: valeur.Place } : valeur;
+                        { _id: id, Team1: newTeam1, Team2: newTeam2, ScoreTeam1: newScoreTeam1, ScoreTeam2: newScoreTeam2, Place: newPlace } : valeur;
                 })
             );
         });
@@ -128,7 +136,7 @@ function PageAPI() {
                                 <div className="size">Team 1 : {valeur.Team1} </div>
                                 <div className="size">Team 2 : {valeur.Team2}</div>
                                 <div className="size">But {valeur.Team1} : {valeur.ScoreTeam1} </div>
-                                <div className="size">But {valeur.Team} : {valeur.ScoreTeam2} </div>
+                                <div className="size">But {valeur.Team2} : {valeur.ScoreTeam2} </div>
                                 <div className="size">Emplacement match: {valeur.Place} </div>
                             </div>
                             <button onClick={() => {

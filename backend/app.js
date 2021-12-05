@@ -51,11 +51,18 @@ app.put("/updateMatch", async (req, res) => {
     const id = req.body.id;
     const newTeam1 = req.body.newTeam1;
     const newTeam2 = req.body.newTeam2;
+    const newScoreTeam1 = req.body.newScoreTeam1;
+    const newScoreTeam2 = req.body.newScoreTeam2;
+    const newPlace = req.body.newPlace;
+
 
     try {
         await matchModel.findById(id, (error, MatchToUpdate) => {
             MatchToUpdate.Team1 = newTeam1;
             MatchToUpdate.Team2 = newTeam2;
+            MatchToUpdate.ScoreTeam1 = newScoreTeam1;
+            MatchToUpdate.ScoreTeam2 = newScoreTeam2;
+            MatchToUpdate.Place = newPlace;
             MatchToUpdate.save();
 
 

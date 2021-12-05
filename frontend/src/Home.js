@@ -19,12 +19,6 @@ class Home extends React.Component {
 
 
             <div>
-                {/*Header debut */}
-
-
-
-                {/*Header fin */}
-
                 <main>
                     <div className="container-fluid">
                         <div className="row">
@@ -43,7 +37,7 @@ class Home extends React.Component {
                         <div className="row">
                             <div className="col-md-3">
 
-                                {/* <Widget3 />*/}
+                                <Widget3 />
                             </div>
                             <div className="col-md-6">
                                 <Widget2 />
