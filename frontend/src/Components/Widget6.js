@@ -50,6 +50,8 @@ class Widget6 extends React.Component {
                 ))}
             </div>
 
+
+
         )
 
     }

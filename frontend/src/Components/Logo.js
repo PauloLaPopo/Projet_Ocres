@@ -26,6 +26,8 @@ import terrain from '../images/terrain_foot.jpg';
 import position from '../images/position.png';
 import horloge1 from '../images/Image3.png';
 import loca from '../images/locali.png';
+import pin1 from '../images/pin1.png';
+import pin2 from '../images/pin2.png';
 
 
 
@@ -156,6 +158,16 @@ class Logo extends React.Component {
         else if (team_name === "loca") {
             return (
                 loca
+            )
+        }
+        else if (team_name === "pin1") {
+            return (
+                pin1
+            )
+        }
+        else if (team_name === "pin2") {
+            return (
+                pin2
             )
         }
     }

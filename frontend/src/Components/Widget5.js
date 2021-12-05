@@ -2,6 +2,7 @@ import React from 'react';
 import './Widget5.css';
 import './Logo.js';
 import teamId from './teamId';
+import Logo from './Logo.js';
 
 
 class Widget5 extends React.Component {
@@ -19,7 +20,7 @@ class Widget5 extends React.Component {
     }
 
     componentDidMount() {
-        this._isMounted = true;
+        /*this._isMounted = true;
         fetch("http://localhost:3001/readMatch")
             .then((response) => response.json())
             .then((result) => {
@@ -42,7 +43,7 @@ class Widget5 extends React.Component {
                         })
                 }
 
-            })
+            })*/
 
 
     }
@@ -53,7 +54,7 @@ class Widget5 extends React.Component {
     render() {
         return (
 
-            <div className="Background" >
+            /*<div className="Background" >
 
 
 
@@ -148,8 +149,103 @@ class Widget5 extends React.Component {
                     ))}
 
                 </table>
-            </div>
+            </div>*/
 
+            <div className="Background" >
+
+
+
+                <table className="tableau-style5">
+                    <tbody>
+                        <tr className="row_tab5" >
+                            <td></td>
+                            <td></td>
+                            <td className="Gk">Navas<span className="pin"><br /><Logo team_name="pin1" widht="15px" height="15px" /></span></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+
+
+                        <tr className="row_tab5"  >
+                            <td className="LgG">J. Bernat<span className="pin"><br /><Logo team_name="pin1" widht="15px" height="15px" /></span></td>
+                            <td className="DcG">Sergio Ramos<span className="pin"><br /><Logo team_name="pin1" widht="15px" height="15px" /></span></td>
+                            <td></td>
+                            <td className="DcD">Marquinhos<span className="pin"><br /><Logo team_name="pin1" widht="15px" height="15px" /></span></td>
+                            <td className="LgD">S. Aurier<span className="pin"><br /><Logo team_name="pin1" widht="15px" height="15px" /></span></td>
+
+                        </tr>
+
+
+
+                        <tr className="row_tab5"  >
+                            <td></td>
+                            <td>L Paredes<span className="pin"><br /><Logo team_name="pin1" widht="15px" height="15px" /></span></td>
+                            <td>M. Verrati<span className="pin"><br /><Logo team_name="pin1" widht="15px" height="15px" /></span></td>
+                            <td>Wijnaldum<span className="pin"><br /><Logo team_name="pin1" widht="15px" height="15px" /></span></td>
+                            <td></td>
+                        </tr>
+
+
+
+                        <tr className="row_tab5"  >
+                            <td>L. Messi<span className="pin"><br /><Logo team_name="pin1" widht="15px" height="15px" /></span></td>
+                            <td></td>
+                            <td>K. Mbappe<span className="pin"><br /><Logo team_name="pin1" widht="15px" height="15px" /></span></td>
+                            <td></td>
+                            <td>Neymar<span className="pin"><br /><Logo team_name="pin1" widht="15px" height="15px" /></span></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+
+
+                <table className="tableau-style6">
+                    <tbody>
+                        <tr className="row_tab5"  >
+                            <td></td>
+                            <td><span className="pin"><Logo team_name="pin2" widht="15px" height="15px" /></span><br />A. Milik </td>
+                            <td className="Gk"></td>
+                            <td><span className="pin"><Logo team_name="pin2" widht="15px" height="15px" /></span><br />D. Payet</td>
+                            <td></td>
+                        </tr>
+
+
+
+                        <tr className="row_tab5" >
+                            <td className="LgG"><span className="pin"><Logo team_name="pin2" widht="15px" height="15px" /></span><br />J. Amavi</td>
+                            <td className="DcG"><span className="pin"><Logo team_name="pin2" widht="15px" height="15px" /></span><br />M. Guendouzi</td>
+                            <td><span className="pin"><Logo team_name="pin2" widht="15px" height="15px" /></span><br />B. Kamara</td>
+                            <td className="DcD"><span className="pin"><Logo team_name="pin2" widht="15px" height="15px" /></span><br />Gerson</td>
+                            <td className="LgD"><span className="pin"><Logo team_name="pin2" widht="15px" height="15px" /></span><br />C. Under</td>
+
+                        </tr>
+
+
+
+                        <tr className="row_tab5"  >
+                            <td></td>
+                            <td><span className="pin"><Logo team_name="pin2" widht="15px" height="15px" /></span><br />Saliba</td>
+                            <td><span className="pin"><Logo team_name="pin2" widht="15px" height="15px" /></span><br />Caleta-car</td>
+                            <td><span className="pin"><Logo team_name="pin2" widht="15px" height="15px" /></span><br />Luan Peres</td>
+                            <td></td>
+                        </tr>
+
+
+                        <tr className="row_tab5" >
+                            <td></td>
+                            <td></td>
+                            <td><span className="pin"><Logo team_name="pin2" widht="15px" height="15px" /></span><br />Mandanda</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
         )
 
     }

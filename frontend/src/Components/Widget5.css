@@ -10,16 +10,19 @@ body{
  }
  .tableau-style5{
    margin: 10px auto;
-   padding-top: 15px;
-   font-size: 10px;
+   margin-top: 18px;
+   font-size: 9px;
+   color: #fff;
+   font-weight:500;
  }
 .Gk{
    text-align: center; 
 }
 .row_tab5 td{
    width: 55px;
-   height: 23px;
-   padding: 5px;
+   height: 2.5em;
+   padding: 2px;
+   text-align: center;
 }
 .DcG{
    vertical-align: top;
@@ -31,6 +34,11 @@ body{
 
 .tableau-style6{
    margin: 10px auto;
-   font-size: 10px;
-   margin-top: 6em;
+   font-size: 9px;
+   margin-top: 2em;
+   color: #fff;
+   font-weight: 500;
  }
+.pin{
+   
+}

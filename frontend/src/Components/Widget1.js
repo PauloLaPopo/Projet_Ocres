@@ -16,7 +16,7 @@ class Widget1 extends React.Component {
     }
 
     componentDidMount() {
-        this._isMonted = true;
+        this._isMounted = true;
         fetch("https://data.football-api.com/v3/standings/1221?Authorization=cfnR6LWc4i4MDFLlPJrajoa465c4qjF594kpIy4b        ")
             .then((response) => response.json())
             .then((result) => {

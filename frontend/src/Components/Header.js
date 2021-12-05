@@ -30,11 +30,15 @@ class Header extends React.Component {
                                 <ul className="navbar-nav ">
                                     <li className="nav-item active">
                                         {/*eslint-disable-next-line */}
-                                        <Link to="/">Home</Link>
+                                        <div className="nav-link">
+                                            <Link to="/">Home</Link>
+                                        </div>
                                         {/*<a class="nav-link " href="#">Page principale <span class="sr-only">(current)</span></a>*/}
                                     </li>
                                     <li className="nav-item">
-                                        <Link to="/pageAPI">Notre API</Link>
+                                        <div className="nav-link">
+                                            <Link to="/pageAPI">Notre API</Link>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
