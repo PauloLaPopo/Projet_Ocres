@@ -128,9 +128,9 @@ function PageAPI() {
 
 
             <div className="ListMatchs">
-                {ListMatchs.map((valeur) => {
+                {ListMatchs.map((valeur, index) => {
                     return (
-                        <div className="MatchContainer">
+                        <div className="MatchContainer" key={`list-elem-${index}`}>
                             <div className="Matchs">
 
                                 <div className="size">Team 1 : {valeur.Team1} </div>

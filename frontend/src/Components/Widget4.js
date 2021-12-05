@@ -19,7 +19,7 @@ class Widget4 extends React.Component {
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "odds.p.rapidapi.com",
-                "x-rapidapi-key": "3685a79f54msh29c76be0f40710cp1df765jsn975bada232b4"
+                "x-rapidapi-key": "d6c23b870cmshe976486b1e661e5p1f31e2jsna3e23a8230cf"
             }
         })
             .then((response) => response.json())
@@ -39,17 +39,19 @@ class Widget4 extends React.Component {
 
     render() {
         return (
+
             <div className="table-responsive">
-                <table className="tableau-style4">
+                <table className="tableau-style4 ">
                     <caption className="title_cote">Cotes des matchs à venir</caption>
 
                     {this.state.post.slice(0, 4).map((post, index) => (
                         <tr className="row_info" key={`list-elem-${index}`} >
-                            <td className="team_home">{post.teams[0]}</td>
+                            <td className="team_home">{post.teams[0]} </td>
                             <td className="odds">{post.sites[0].odds.h2h[0]}</td>
                             <td className="odds">{post.sites[0].odds.h2h[2]}</td>
                             <td className="odds">{post.sites[0].odds.h2h[1]}</td>
                             <td className="team_away">{post.teams[1]}</td>
+                            <span class="test">prout</span>
                         </tr>
                     ))}
                 </table>

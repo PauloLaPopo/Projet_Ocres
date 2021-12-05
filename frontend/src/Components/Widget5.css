@@ -3,12 +3,46 @@ body{
     font-family: Arial, Arial, Helvetica, sans-serif;
   }
 
-  @media (min-width: 250px) {
+  @media (min-width: 315px) {
    .container-bg{
-       max-width: 330px;
+       max-width: 317px;
+       
    }
 }
 
+@media (max-width: 1194px){
+   .team1{
+      font-size: 7px;
+   }
+   .team2{
+      font-size: 7px;
+   }
+}
+
+@media (max-width: 991px){
+   .team1{
+      font-size: 8px;
+   }
+   .team2{
+      font-size: 8px;
+   }
+}
+@media (max-width: 911px){
+   .team1{
+      font-size: 7px;
+   }
+   .team2{
+      font-size: 7px;
+   }
+}
+@media (max-width: 767px){
+   .team1{
+      font-size: 8px;
+   }
+   .team2{
+      font-size: 8px;
+   }
+}
  .container-bg{
     background-image: url('../images/football_terrain.png');
     height: 100%;

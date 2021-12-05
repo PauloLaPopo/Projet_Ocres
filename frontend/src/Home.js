@@ -23,16 +23,16 @@ class Home extends React.Component {
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col-lg-3 order-lg-first order-md-last order-sm-last order-last">
-                                <Widget1 />
+                                {/*<Widget1 />*/}*
                                 <Widget3 />
                             </div>
                             <div className="col-lg-6 col-md-8 order-md-first order-sm-first">
-                                <Widget6 />
-                                <Widget2 />
+                                {/*<Widget6 />
+                                <Widget2 />*/}
                             </div>
                             <div className="col-lg-3 col-md-4">
-                                <Widget5 />
-                                {/*<Widget4 />*/}
+                                {/*<Widget5 />*/}
+                                <Widget4 />
                             </div>
                         </div>
 

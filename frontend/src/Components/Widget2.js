@@ -58,6 +58,9 @@ class Widget2 extends React.Component {
                                 <td className="horloge"><Logo team_name="horloge" widht="15px" height="15px" /></td>
                                 <td className="match_time">{post.time}</td>
                                 <td className="match_day">{post.formatted_date}</td>
+
+                                <span class="more_infos"><div> Evènements</div>
+                                    <div></div></span>
                             </tr>
                         ))}
                     </thead>

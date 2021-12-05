@@ -29,32 +29,24 @@ class Header extends React.Component {
                                 <img src={`${Logo}`} height="40" width="65" className="img-fluid" alt="" />
                                 <ul className="navbar-nav ">
                                     <li className="nav-item active">
-                                        {/*eslint-disable-next-line */}
                                         <div className="nav-link">
-                                            <Link to="/">Home</Link>
+                                            <Link to="/" className="text-secondary">Page Principale</Link>
                                         </div>
-                                        {/*<a class="nav-link " href="#">Page principale <span class="sr-only">(current)</span></a>*/}
                                     </li>
-                                    <li className="nav-item">
+                                    <li className="nav-item mr-3">
                                         <div className="nav-link">
-                                            <Link to="/pageAPI">Notre API</Link>
+                                            <Link to="/pageAPI" className="text-secondary">Notre API</Link>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div className="mx-auto">
-                            <div className="px-5 py-2 rounded-pill border">
+                        <div className="ml-5 mr-auto">
+                            <div className="px-3 py-2 rounded-pill border">
                                 <div className="titre"> DASBOARD LIGUE 1</div>
                             </div>
                         </div>
-                        <div className="ml-auto">
-                            <form className="form-inline">
-                                <a className="navbar-brand" href="">
-                                    Admin
-                                </a>
-                            </form>
-                        </div>
+
                     </nav >
                 </header>
                 <Routes />
