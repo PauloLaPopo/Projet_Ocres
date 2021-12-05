@@ -43,17 +43,18 @@ class Widget4 extends React.Component {
             <div className="table-responsive">
                 <table className="tableau-style4 ">
                     <caption className="title_cote">Cotes des matchs à venir</caption>
-
-                    {this.state.post.slice(0, 4).map((post, index) => (
-                        <tr className="row_info" key={`list-elem-${index}`} >
-                            <td className="team_home">{post.teams[0]} </td>
-                            <td className="odds">{post.sites[0].odds.h2h[0]}</td>
-                            <td className="odds">{post.sites[0].odds.h2h[2]}</td>
-                            <td className="odds">{post.sites[0].odds.h2h[1]}</td>
-                            <td className="team_away">{post.teams[1]}</td>
-                            <span class="test">prout</span>
-                        </tr>
-                    ))}
+                    <tbody>
+                        {this.state.post.slice(0, 4).map((post, index) => (
+                            <tr className="row_info" key={`list-elem-${index}`} >
+                                <td className="team_home">{post.teams[0]} </td>
+                                <td className="odds">{post.sites[0].odds.h2h[0]}</td>
+                                <td className="odds">{post.sites[0].odds.h2h[2]}</td>
+                                <td className="odds">{post.sites[0].odds.h2h[1]}</td>
+                                <td className="team_away">{post.teams[1]}</td>
+                                <td className="test">prout</td>
+                            </tr>
+                        ))}
+                    </tbody>
                 </table>
             </div >
         )

@@ -42,6 +42,7 @@ class App extends React.Component {
           </div>
         </main>
       */}
+        <footer className="text-right text-secondary"> Made By Antoine Pouillard & Paul Arquier</footer>
         {/* <Footer /> */}
       </div>
     );
