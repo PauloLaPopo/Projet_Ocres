@@ -50,7 +50,7 @@ class Header extends React.Component {
                         </div>
                         <div className="ml-auto">
                             <form className="form-inline">
-                                <a className="navbar-brand" href="https://www.google.fr/">
+                                <a className="navbar-brand" href="">
                                     Admin
                                 </a>
                             </form>

@@ -81,7 +81,8 @@ class Widget5 extends React.Component {
                 </div>
                 <div className="container-fluid mt-4 w-100">
                     {this.state.post1.map((post1, index) => (
-                        <div className="team2">
+
+                        <div className="team2" >
                             <div className="row pb-2">
                                 <div className="col-4 text-center"><span className="pin"><Logo team_name="pin2" widht="15px" height="15px" /></span><br />{post1.squad[6].name}</div>
                                 <div className="col-4 text-center"><span className="pin"><Logo team_name="pin2" widht="15px" height="15px" /></span><br />{post1.squad[6].name}</div>

@@ -1,23 +1,8 @@
-# Projet de fin de semestre
+# PROJET LIGUE 1 DASBOARD BY ANTOINE POUILLARD & PAUL ARQUIER 
 
-A lire impérativement avant de commencer quoi que ce soit, ce sont les règles que vous devrez appliquer tout au long du semestre:
+Nous avons réalisé 6 widgets sur le theme du foot dont 1 via notre propre API ( match en live)
 
-<p align="center">
- <a href="https://gitlab.com/Adrien_Kourganoff/instructions_web_ocres_ing4/-/blob/master/README.md">Règles pour le semestre</a>
-</p>
+lien de notre trello : https://trello.com/invite/b/rjFNMrNx/dc885d104e8a359cee6d21374d7b29e8/avancement-projet
 
-## Introduction
-
-Ce repo git contient deux repertoires. L'un concerne la partie backend et l'autre la partie frontend.
-
-Les deux repertoires ont été initialisé pour vous aider à démarrer le projet dans les meilleures conditions.
-
-Chacun de ces repertoires contient un README.md qui vous pouvez vous approprier. Nous vous encourageons à le faire en y mettant toute les informations nécessaires à la compréhension de votre projet
-
-## Instructions
-
-Les instructions sont à retrouver dans le pdf instruction.pdf.
-
-**Le non respect de ces instructions entraînera des pertes de points alors prenez le temps de tout lire et de poser des questions si vous ne comprenez pas**
-
-Pour rappel, la probabilité de recevoir une réponse à un mail envoyé quelques heures avant le rendu est très proche de 0.
+Nous avons réalisé le mockup de notre dashboard sur Figma. 
+Notre PDF se trouve dans le dossier PROJET_WEB_OCRES.

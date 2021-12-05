@@ -24,7 +24,7 @@ function PageAPI() {
             alert(" match ajouté");
             SetListMatchs([...ListMatchs, { _id: response.data.id, Team1: Team1, Team2: Team2, ScoreTeam1: ScoreTeam1, ScoreTeam2: ScoreTeam2, Place: Place }]);
 
-            {/*on fait appelle à cette fonction afin d'envoyer à notre setlistmatchs le dernier ajout */ }
+            //on fait appelle à cette fonction afin d'envoyer à notre setlistmatchs le dernier ajout 
             Axios.get('http://localhost:3001/readMatch')
                 .then((response) => {
                     SetListMatchs(response.data);
