@@ -26,7 +26,7 @@ class Widget2 extends React.Component {
 
     componentDidMount() {
         this._isMounted = true;
-        fetch(`https://data.football-api.com/v3/matches?comp_id=1221&from_date=${this.dateStringFrom}&to_date=04.12.2021&Authorization=cfnR6LWc4i4MDFLlPJrajoa465c4qjF594kpIy4b        `)
+        fetch(`https://data.football-api.com/v3/matches?comp_id=1221&from_date=${this.dateStringFrom}&to_date=${this.dateString}&Authorization=cfnR6LWc4i4MDFLlPJrajoa465c4qjF594kpIy4b        `)
             .then((response) => response.json())
             .then((result) => {
                 if (this._isMounted) {
