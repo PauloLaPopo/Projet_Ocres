@@ -6,3 +6,10 @@ lien de notre trello : https://trello.com/invite/b/rjFNMrNx/dc885d104e8a359cee6d
 
 Nous avons réalisé le mockup de notre dashboard sur Figma. 
 Notre PDF se trouve dans le dossier PROJET_WEB_OCRES.
+
+lien de notre site en ligne : https://dasboard-ligue1.netlify.app/
+
+Netlify : partie frontend
+Heroku : partie backend
+Mongo compass : Bdd online
+
