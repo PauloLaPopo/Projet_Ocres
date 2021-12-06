@@ -80,3 +80,12 @@ body{
   text-align: left;
   caption-side: top;
 }
+
+.row_result .more_infos {display: none;}
+.row_result:hover .more_infos{
+  position:absolute;
+  background-color: white;
+  display:inline;
+  border:2px solid green;
+  left: 50%;
+}

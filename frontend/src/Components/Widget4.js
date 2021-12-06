@@ -1,6 +1,5 @@
 import React from 'react';
 import './Widget4.css';
-import './Logo.js';
 
 
 class Widget4 extends React.Component {
@@ -45,13 +44,13 @@ class Widget4 extends React.Component {
                     <caption className="title_cote">Cotes des matchs à venir</caption>
                     <tbody>
                         {this.state.post.slice(0, 4).map((post, index) => (
-                            <tr className="row_info" key={`list-elem-${index}`} >
+                            <tr className="row_info5" key={`list-elem-${index}`} >
                                 <td className="team_home">{post.teams[0]} </td>
                                 <td className="odds">{post.sites[0].odds.h2h[0]}</td>
                                 <td className="odds">{post.sites[0].odds.h2h[2]}</td>
                                 <td className="odds">{post.sites[0].odds.h2h[1]}</td>
                                 <td className="team_away">{post.teams[1]}</td>
-                                <td className="test">prout</td>
+
                             </tr>
                         ))}
                     </tbody>

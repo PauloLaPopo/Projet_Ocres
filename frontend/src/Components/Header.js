@@ -42,10 +42,11 @@ class Header extends React.Component {
                             </div>
                         </div>
                         <div className="ml-5 mr-auto">
-                            <div className="px-3 py-2 rounded-pill border">
+                            <div className="mx-4 py-2 rounded-pill border">
                                 <div className="titre"> DASBOARD LIGUE 1</div>
                             </div>
                         </div>
+
 
                     </nav >
                 </header>

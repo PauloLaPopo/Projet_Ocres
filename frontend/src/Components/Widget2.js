@@ -17,6 +17,7 @@ class Widget2 extends React.Component {
         super(props);
         this.dateString = dateString;
         this.dateStringFrom = dateStringFrom;
+
         this.state = {
             post: [],
         };
@@ -25,13 +26,17 @@ class Widget2 extends React.Component {
 
     componentDidMount() {
         this._isMounted = true;
-        fetch(`https://data.football-api.com/v3/matches?comp_id=1221&from_date=${this.dateStringFrom}&to_date=${this.dateString}&Authorization=cfnR6LWc4i4MDFLlPJrajoa465c4qjF594kpIy4b        `)
+        fetch(`https://data.football-api.com/v3/matches?comp_id=1221&from_date=${this.dateStringFrom}&to_date=04.12.2021&Authorization=cfnR6LWc4i4MDFLlPJrajoa465c4qjF594kpIy4b        `)
             .then((response) => response.json())
             .then((result) => {
                 if (this._isMounted) {
-                    this.setState({ post: result })
+                    this.setState({
+                        post: result,
+
+                    })
                 }
             })
+
 
     }
     componentWillUnmount() {
@@ -59,8 +64,17 @@ class Widget2 extends React.Component {
                                 <td className="match_time">{post.time}</td>
                                 <td className="match_day">{post.formatted_date}</td>
 
-                                <span class="more_infos"><div> Evènements</div>
-                                    <div></div></span>
+
+                                <td className="more_infos">
+                                    {this.state.post[index].events.map((post, index1) => (
+
+                                        <div key={`list-elem-${index1}`}>{post.minute}"<Logo team_name={post.type} weight="20px" height="20px" /> : {post.player}
+                                        </div>
+
+
+                                    ))}
+                                </td>
+
                             </tr>
                         ))}
                     </thead>

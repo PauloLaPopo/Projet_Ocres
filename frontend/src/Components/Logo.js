@@ -27,6 +27,10 @@ import horloge1 from '../images/Image3.png';
 import loca from '../images/locali.png';
 import pin1 from '../images/pin1.png';
 import pin2 from '../images/pin2.png';
+import goal from '../images/ballon_foot.svg';
+import red_card from '../images/carton_rouge.jpg';
+import yellow_card from '../images/carton_jaune.jpg';
+import subst from '../images/subs.svg';
 
 
 
@@ -162,6 +166,26 @@ class Logo extends React.Component {
         else if (team_name === "pin2") {
             return (
                 pin2
+            )
+        }
+        else if (team_name === "goal") {
+            return (
+                goal
+            )
+        }
+        else if (team_name === "yellowcard") {
+            return (
+                yellow_card
+            )
+        }
+        else if (team_name === "redcard") {
+            return (
+                red_card
+            )
+        }
+        else if (team_name === "subst") {
+            return (
+                subst
             )
         }
     }

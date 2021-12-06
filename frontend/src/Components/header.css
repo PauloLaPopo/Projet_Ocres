@@ -4,3 +4,15 @@
     color: green;
     font-weight: bold;
 }
+@media (max-width : 675px){
+    .titre{
+        margin-left: 7em;
+        margin-right: 7em;
+    }
+}
+@media (max-width : 418px){
+    .titre{
+        margin-left: 4em;
+        margin-right: 4em;
+    }
+}
